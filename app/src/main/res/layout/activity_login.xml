@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dell.food2u.Login">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mobile_No"
+        android:hint="Enter mobile no"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="150dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/password_one"
+        android:inputType="textPassword"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:hint="Enter Password"
+        android:layout_below="@+id/mobile_No" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOGIN"
+        android:id="@+id/login"
+        android:layout_below="@+id/password_one"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="120dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REGISTER"
+        android:id="@+id/register"
+        android:layout_below="@+id/password_one"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="210dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:textAllCaps="true"
+        android:textSize="7pt"
+        android:layout_below="@+id/login"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/forget"/>
+
+</RelativeLayout>
