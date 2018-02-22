@@ -162,7 +162,7 @@ public class Login extends AppCompatActivity {
                 else if(code.equals("0"))
                 {
                     session.createLoginSession(mobile);
-                    startActivity(new Intent(Login.this,Dashboard.class));
+                    startActivity(new Intent(Login.this,MainActivity.class));
                 }
                 else if(code.equals("1"))
                 {
