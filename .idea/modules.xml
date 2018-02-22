@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FOOD2U-master.iml" filepath="$PROJECT_DIR$/FOOD2U-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FOOD2U.iml" filepath="$PROJECT_DIR$/FOOD2U.iml" />
+      <module fileurl="file://C:\Users\dell\AndroidStudioProjects\FOOD2U\FOOD2U-master.iml" filepath="C:\Users\dell\AndroidStudioProjects\FOOD2U\FOOD2U-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

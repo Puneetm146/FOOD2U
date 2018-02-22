@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -53,13 +54,11 @@ public class Login extends AppCompatActivity {
 
         builder = new AlertDialog.Builder(Login.this);
 
-
         net_check = netCheck();
 
         if(net_check == true){
             displayNetwork();
         }
-
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
