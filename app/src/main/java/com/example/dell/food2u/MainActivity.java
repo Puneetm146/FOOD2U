@@ -1,5 +1,6 @@
 package com.example.dell.food2u;
 
+import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -16,8 +17,11 @@ import android.widget.GridLayout;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    Session session;
-GridLayout maingrid;
+//
+//    Session session;
+    GridLayout maingrid;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -116,9 +120,11 @@ GridLayout maingrid;
 
         } else if (id == R.id.logbtn) {
 
-            session.checkLogin();
-            session.logoutUser();
-            startActivity(new Intent(MainActivity.this,Login.class));
+//
+//            session.checkLogin();
+//
+//            session.logoutUser();
+//            startActivity(new Intent(MainActivity.this,Login.class));
 
         } else if (id == R.id.nav_share) {
 

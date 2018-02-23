@@ -6,5 +6,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="whitebg">#33ffffff</color>
     <color name="transparent">#0000</color>
-
+    <color name="colorwhite">#ffffff</color>
+    <color name="colorblack">#0A0A0A</color>
+    <color name="colororange">#FF7F50</color>
 </resources>

@@ -14,7 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -30,8 +30,9 @@ import java.util.Map;
 
 public class Login extends AppCompatActivity {
 
-    Button login,register;
-    EditText ed_mobile, ed_password;
+    Button login;
+    TextView ed_mobile, register;
+    EditText ed_password;
     String mobile, password;
     Session session;
 
@@ -45,9 +46,9 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        login = (Button)findViewById(R.id.login);
-        register = (Button)findViewById(R.id.register);
-        ed_mobile = (EditText)findViewById(R.id.mobile_No);
+        login = (Button)findViewById(R.id.Login);
+        register = (TextView) findViewById(R.id.register);
+        ed_mobile = (TextView) findViewById(R.id.mobile_No);
         ed_password = (EditText)findViewById(R.id.password_one);
 
         session = new Session(getApplicationContext());

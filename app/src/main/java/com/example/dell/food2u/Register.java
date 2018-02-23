@@ -21,8 +21,8 @@ import java.util.Map;
 
 public class Register extends AppCompatActivity{
     Button reg_bn;
-    EditText ed_firstname, ed_mobile, ed_email, ed_password, ed_compassword, ed_lastname;
-    String firstname, mobile, email, password, compassword, lastname;
+    EditText ed_firstname, ed_mobile, ed_email, ed_password, ed_lastname;
+    String firstname, mobile, email, password, lastname;
 
     AlertDialog.Builder builder;
 
@@ -30,13 +30,14 @@ public class Register extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
+
         reg_bn = (Button)findViewById(R.id.register);
+
         ed_firstname = (EditText)findViewById(R.id.name);
         ed_lastname = (EditText)findViewById(R.id.last);
         ed_mobile = (EditText)findViewById(R.id.mobile);
         ed_email = (EditText)findViewById(R.id.email);
         ed_password = (EditText)findViewById(R.id.password);
-        ed_compassword = (EditText)findViewById(R.id.repassword);
 
         builder = new AlertDialog.Builder(Register.this);
 
@@ -48,10 +49,9 @@ public class Register extends AppCompatActivity{
                 mobile = ed_mobile.getText().toString();
                 email = ed_email.getText().toString();
                 password = ed_password.getText().toString();
-                compassword = ed_compassword.getText().toString();
 
                 String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-                if(firstname.equals("") || email.equals("") || mobile.equals("") || password.equals("") || compassword.equals(""))
+                if(firstname.equals("") || email.equals("") || mobile.equals("") || password.equals(""))
                 {
                     builder.setTitle("Something went wrong....");
                     builder.setMessage("Please fill all the fields...");
@@ -73,14 +73,7 @@ public class Register extends AppCompatActivity{
 
                 else
                 {
-                    if(!(password.equals(compassword)))
-                    {
-                        builder.setTitle("Password is wrong");
-                        builder.setMessage("Your password is not matching...");
-                        displayAlert("input_error");
-                    }
-                    else
-                    {
+
                         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL.base_url+URL.register,
                                 new Response.Listener<String>() {
                                     @Override
@@ -122,7 +115,7 @@ public class Register extends AppCompatActivity{
 
                         MySingleton.getInstance(Register.this).addToRequestque(stringRequest);
 
-                    }
+
 
 
                 }
@@ -141,7 +134,6 @@ public class Register extends AppCompatActivity{
                 if(code.equals("input_error"))
                 {
                     ed_password.setText("");
-                    ed_compassword.setText("");
                 }
 //                else if(code.equals("Registration Success"))
 //                {
